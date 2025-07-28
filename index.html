@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>LOCAL-FOOD MENU APP</title>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-items">
+				<a href="./">Home</a>
+				<a href="./About.html">About</a>
+				<a href="./Services.html">Services</a>
+				<a href="./contact.html">Contact</a>
+			</nav>
+		</header>
+<section class="hero">
+	<div>
+			<h1>
+			   HONEY'S FOOD MENU
+			</h1>
+			<p><em>
+				Have your deliciously prepared favourite meal served with the speed of light! 
+			</em></p>
+	</div>
+</section>
+
+
+
+<section id="heroB" class="heroB">
+	<div id="foodCont" class="foodContainer">
+		<div class="food">
+				<img src="./images/images(1).jpeg" alt="Egusi soup">
+				<h3>Egusi Soup</h3>
+                <h3>#5,000.00/plate</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-egusi">
+				<button id="egOrder" class="order" onclick="addToOrder('Egusi', 5000.00, 'qty-egusi')">Add to plate</button>
+			</div>
+			<div class="food">
+				<img src="./images/images (2).jpeg" alt="Nkwobi">
+				<h3>Nkwobi</h3>
+                <h3>#15,000.00/pot</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-nkwobi">
+				<button id="nkOrder" class="order"  onclick="addToOrder('Nkwobi', 15000.00, 'qty-nkwobi')">Add to plate</button>
+			</div>
+			<div class="food">
+				<img src="./images/images (3).jpeg" alt="Akidi">
+				<h3>Akidi</h3>
+                <h3>#5,000.00/plate</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-akidi">
+				<button id="akOrder" class="order"  onclick="addToOrder('Akidi', 5000.00, 'qty-akidi')">Add to plate</button>
+			</div>
+			<div class="food">
+				<img src="./images/images (4).jpeg" alt="Abacha">
+				<h3>Abacha-Enugu</h3>
+                <h3>#3,000.00/plate</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-abacha">
+				<button id="abOrder" class="order"  onclick="addToOrder('Abacha-Enugu', 3000., 'qty-abacha')">Add to plate</button>
+			</div>
+			
+			<div class="food">
+				<img src="./images/images (5).jpeg" alt="Fried turkey">
+				<h3>Fried-Turkey</h3>
+                <h3>#6,000.00</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-turkey">
+				<button id="tuOrder" class="order"  onclick="addToOrder('Fried-Turkey', 6000.00, 'qty-turkey')">Add to plate</button>
+			</div>
+			<div class="food">
+				<img src="./images/images (6).jpeg" alt="Fried fish">
+				<h3>Fried-Fish</h3>
+                <h3>#1,500.00</h3>
+				<input type="number" min="1" value="1" class="qty-input" id="qty-fish">
+				<button id="fiOrder" class="order"  onclick="addToOrder('Fried-Fish', 1500.00, 'qty-fish')">Add to plate</button>
+			</div>
+
+		</div>
+
+
+
+		<aside class="sidebarC" id="sidebar">
+			<div class="sidebarP">
+				<h2>Your Orders</h2>
+				<ol class="selected-list" id="selectedList"></ol>
+				<p class="total">Total: #<span id="totalPrice">0.00</span></p>
+			</div><br><br>
+                <button class="print-btn" onclick="printOrder()">Print Order</button>
+				<button class="clear-btn" onclick="clearAll()">Clear All</button>
+		</aside>
+
+		<div id="loadingOverlay">
+            <div class="spinner"></div>
+        </div>
+
+
+</section>
+
+	    
+
+
+		<script src="script.js"></script> 
+	</body>
+    <footer>
+		<p><em>@copyright 2025 | Isife Chisom.</em></p>
+		<p class="mail"><em>
+			chisomisife2023@gmail.com
+		</em></p>
+    </footer>
+</html>
